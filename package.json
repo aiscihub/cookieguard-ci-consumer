@@ -1,0 +1,20 @@
+{
+  "name": "cookieguard-ci-consumer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "test:cli": "node scripts/verify-cli.js",
+    "test:playwright": "node scripts/verify-playwright.js",
+    "test:production": "node scripts/verify-runtime.js && node scripts/verify-cli.js",
+    "start": "node scripts/fixture.js"
+  },
+  "dependencies": {
+    "@aiscihub/cookieguard-core": "0.1.0",
+    "@aiscihub/cookieguard-playwright": "0.1.0",
+    "cookieguard-ci": "0.1.0"
+  },
+  "devDependencies": { "playwright": "1.64.1" }
+}
